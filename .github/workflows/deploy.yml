@@ -9,7 +9,6 @@ on:
   push:
     branches:
       - main
-      - claude/intelligent-clarke-ypqcrn
   workflow_dispatch:
 
 permissions:
