@@ -1,0 +1,28 @@
+# Hosting for zaaf.in
+#
+# The website lives in site/ and builds to site/dist. These settings mean a
+# host can be connected without filling in a single field by hand.
+
+[build]
+  base = "site"
+  command = "pnpm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# The site is one page app with client-side routing, so every path has to be
+# served index.html. Without this, opening zaaf.in/learn directly, or simply
+# refreshing it, would return "page not found".
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Nothing here is private, but there is no reason to let the preview builds be
+# indexed alongside the real site.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
