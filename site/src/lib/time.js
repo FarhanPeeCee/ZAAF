@@ -18,9 +18,14 @@ export function format(minutes) {
   return `${h12}${mins ? ':' + String(mins).padStart(2, '0') : ''} ${suffix}`;
 }
 
-// A slot chosen in the parent's local time, expressed in Kerala time.
+// A slot chosen in the visitor's local time, expressed in Kerala time.
 export function toKerala(hhmm, zone) {
   return parse(hhmm) + (KERALA.offset - zone.offset) * 60;
+}
+
+// And the other way: an hour in Kerala, on the visitor's own clock.
+export function fromKerala(hhmm, zone) {
+  return parse(hhmm) - (KERALA.offset - zone.offset) * 60;
 }
 
 export function dayShift(hhmm, zone) {

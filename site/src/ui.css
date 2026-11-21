@@ -450,3 +450,5 @@ body.no-scroll{overflow:hidden}
 .planner-section.is-self .button-green{background:#5e7a25}
 .planner-section.is-self .button-green:hover{background:#4c641c}
 .planner-section.is-self .planner-step:hover{border-color:#cdd8a2}
+
+.reply-local{display:block;font-size:9.5px;line-height:1.7;color:#878d95;margin-top:5px}

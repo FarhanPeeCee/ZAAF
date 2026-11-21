@@ -370,7 +370,7 @@ export function Contact({ teaching = false }) {
           context={teaching ? 'teach' : 'contact'}
           message={teaching ? 'Assalamu alaikum Zaaf, I would like to apply to teach or mentor.' : (done ? planMessage(plan) : undefined)}
         >{teaching ? 'Ask about mentoring' : done ? 'Send my saved plan' : 'Chat on WhatsApp'}</ChatButton>
-        <small>We answer on WhatsApp. Reply hours are still being agreed, so please don’t take silence personally.</small>
+        <small>We answer on WhatsApp between 10 am and 10 pm India time. A message sent after that will be waiting for us in the morning.</small>
       </aside>
     </section>
   </>;
@@ -407,7 +407,7 @@ export function Privacy() {
       <h3>No analytics service, no cookies.</h3>
       <p>This version sets no cookies and loads no analytics service. When you tap a WhatsApp button, the page notes it in your own browser, recording only the page you were on and whether you are on a phone or a computer, so that a counting tool can be added later if the academy wants one. Nothing is sent anywhere, and nothing identifies you. Hosting providers may keep technical request logs under their own policies.</p>
       <h3>Before launch</h3>
-      <p>Contact details, reply hours and any future analytics provider must be confirmed and reflected in this notice.</p>
+      <p>Any future analytics provider must be confirmed and reflected in this notice before it is added.</p>
     </section>
   </>;
 }

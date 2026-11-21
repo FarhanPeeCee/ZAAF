@@ -1,11 +1,35 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowUpRight, Clock3, MessageCircle } from 'lucide-react';
-import { EMAIL, PHONE_DISPLAY, REPLY_HOURS, REPLY_PROMISE_HOURS, WHATSAPP_NUMBER } from '../lib/config';
+import { EMAIL, PHONE_DISPLAY, REPLY_HOURS, REPLY_PROMISE_HOURS, WHATSAPP_NUMBER, ZONES } from '../lib/config';
+import { format, fromKerala, parse, zoneById } from '../lib/time';
+import { usePlan } from '../lib/plan';
 import { Logo } from './Header';
 
 // The returning visitor should be able to read a basic fact without starting a
 // conversation. Everything here is readable without a tap.
+// Most of the families reading this are in the Gulf, an hour and a half or two
+// and a half behind Kerala. Saying "10 am India time" alone leaves them doing
+// the arithmetic, so the site does it for them.
+function inZone({ start, end }, zone) {
+  return `${format(fromKerala(start, zone))} to ${format(fromKerala(end, zone))}`;
+}
+
+function ReplyHours({ compact }) {
+  const { plan } = usePlan();
+  const zone = plan.zoneId ? zoneById(plan.zoneId) : null;
+  const india = `${format(parse(REPLY_HOURS.start))} to ${format(parse(REPLY_HOURS.end))}`;
+  const gulf = ZONES.filter(z => ['AE', 'SA'].includes(z.id));
+  return <>
+    <span>{india}, India time{REPLY_PROMISE_HOURS ? `, usually within ${REPLY_PROMISE_HOURS} hours` : ''}</span>
+    {zone && zone.id !== 'IN'
+      ? <small className="reply-local">That is {inZone(REPLY_HOURS, zone)} where you are, in {zone.label}.</small>
+      : !compact && <small className="reply-local">
+          {gulf.map(z => `${inZone(REPLY_HOURS, z)} in ${z.label}`).join(', and ')}.
+        </small>}
+  </>;
+}
+
 export function ContactLines({ compact = false }) {
   return <div className={`contact-lines ${compact ? 'is-compact' : ''}`}>
     <div>
@@ -20,9 +44,7 @@ export function ContactLines({ compact = false }) {
     </div>
     <div>
       <span className="field-label"><Clock3 size={13} /> Reply hours</span>
-      {REPLY_HOURS
-        ? <span>{REPLY_HOURS.start}–{REPLY_HOURS.end} India time{REPLY_PROMISE_HOURS ? ` · usually within ${REPLY_PROMISE_HOURS} hours` : ''}</span>
-        : <em>Reply hours will be written here in both India and Gulf time once they’re agreed. We would rather say nothing than promise an hour and miss it.</em>}
+      {REPLY_HOURS ? <ReplyHours compact={compact} /> : <em>Reply hours will be written here in both India and Gulf time once they’re agreed. We would rather say nothing than promise an hour and miss it.</em>}
     </div>
   </div>;
 }

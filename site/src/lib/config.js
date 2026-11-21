@@ -13,9 +13,12 @@ export const WHATSAPP_NUMBER = '919656107718';
 export const PHONE_DISPLAY = '+91 9656107718';
 export const EMAIL = 'zaafacademy@gmail.com';
 
-// Reply window, to be stated in both Indian and Gulf time once agreed.
-// { start: '09:00', end: '21:00' } in India time, plus the promise in hours.
-export const REPLY_HOURS = null;
+// When someone is there to answer, in India time. The interface works out what
+// that is where the visitor is, because most of them are in the Gulf.
+export const REPLY_HOURS = { start: '10:00', end: '22:00' };
+
+// A promise only once the academy is sure it can keep it. A stated four hours
+// that is honoured beats a promised one hour that is not.
 export const REPLY_PROMISE_HOURS = null;
 
 export const BOARDS = ['SKIMVB', 'SKSVB'];
