@@ -4,25 +4,25 @@ import { ArrowUpRight, Clock3 } from 'lucide-react';
 import { EMAIL, PHONE_DISPLAY, REPLY_HOURS, REPLY_PROMISE_HOURS } from '../lib/config';
 import { Logo } from './Header';
 
-// Flow 3, the returning parent: she should be able to read a basic fact
-// without starting a conversation. Everything here is readable without a tap.
+// The returning visitor should be able to read a basic fact without starting a
+// conversation. Everything here is readable without a tap.
 export function ContactLines({ compact = false }) {
   return <div className={`contact-lines ${compact ? 'is-compact' : ''}`}>
     <div>
       <span className="field-label">WhatsApp &amp; phone</span>
       {PHONE_DISPLAY
         ? <a className="selectable" href={`tel:${PHONE_DISPLAY.replace(/\s/g, '')}`}>{PHONE_DISPLAY}</a>
-        : <em>Awaiting the academy’s business number. It will be printed here in full international form, as selectable text.</em>}
+        : <em>We’re waiting on the academy’s business number. It will be printed here in full, as text you can select and copy.</em>}
     </div>
     <div>
       <span className="field-label">Email</span>
-      {EMAIL ? <a className="selectable" href={`mailto:${EMAIL}`}>{EMAIL}</a> : <em>To be confirmed.</em>}
+      {EMAIL ? <a className="selectable" href={`mailto:${EMAIL}`}>{EMAIL}</a> : <em>Still to come.</em>}
     </div>
     <div>
       <span className="field-label"><Clock3 size={13} /> Reply hours</span>
       {REPLY_HOURS
         ? <span>{REPLY_HOURS.start}–{REPLY_HOURS.end} India time{REPLY_PROMISE_HOURS ? ` · usually within ${REPLY_PROMISE_HOURS} hours` : ''}</span>
-        : <em>Reply hours will be stated here in both India and Gulf time once agreed, rather than promised and missed.</em>}
+        : <em>Reply hours will be written here in both India and Gulf time once they’re agreed. We would rather say nothing than promise an hour and miss it.</em>}
     </div>
   </div>;
 }
@@ -60,7 +60,7 @@ export function Footer() {
           <span>Kerala, India · Teaching online</span>
         </div>
       </div>
-      <div className="footer-disclaimer">Zaaf provides personalised courses and supporting tuition — not madrassa enrolment or certification. Board names identify the syllabi taught and do not imply affiliation or endorsement.</div>
+      <div className="footer-disclaimer">Zaaf gives personalised courses and supporting tuition. It is not madrassa enrolment, and it carries no certification. Board names describe the syllabi taught, and do not imply affiliation or endorsement.</div>
       <div className="footer-bottom">
         <span>© {new Date().getFullYear()} Zaaf Academy. With care, from Kerala.</span>
         <Link to="/privacy">Privacy, in plain words <ArrowUpRight size={13} /></Link>

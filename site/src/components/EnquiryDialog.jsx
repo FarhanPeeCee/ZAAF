@@ -19,7 +19,7 @@ export function EnquiryDialog({ message, context, close, onCopied }) {
     try {
       await navigator.clipboard.writeText(text);
       setCopied(true);
-      onCopied?.('Message copied — paste it into WhatsApp');
+      onCopied?.('Copied. Paste it into WhatsApp.');
       track('enquiry_copied', { context });
     } catch {
       setCopied(false);
@@ -36,7 +36,7 @@ export function EnquiryDialog({ message, context, close, onCopied }) {
     <span className="choice-icon"><MessageCircle size={25} /></span>
     <span className="eyebrow">YOUR CONVERSATION STARTS HERE</span>
     <h2>A little hello,<br />ready to go.</h2>
-    <p>Your message already carries your choices. Add anything you like before sending it — this is your text, not ours.</p>
+    <p>Your message already carries everything you chose. Add anything you like before you send it. These are your words, not ours.</p>
 
     <label className="field-label" htmlFor="enquiry-text">Your message</label>
     <textarea
@@ -58,16 +58,16 @@ export function EnquiryDialog({ message, context, close, onCopied }) {
       <button className="button button-plain" onClick={copy}>
         {copied ? <Check size={16} /> : <Copy size={16} />}{copied ? 'Copied' : 'Copy the message instead'}
       </button>
-      {PHONE_DISPLAY && <p className="dialog-fallback">If WhatsApp doesn’t open, message <span className="selectable">{PHONE_DISPLAY}</span> from your phone.</p>}
+      {PHONE_DISPLAY && <p className="dialog-fallback">If WhatsApp doesn’t open, message <span className="selectable">{PHONE_DISPLAY}</span> from your phone instead.</p>}
     </> : <>
       <div className="contact-pending">
         <Clock3 size={18} />
-        <span>The academy’s WhatsApp number hasn’t been provided yet, so this preview can’t open a chat. Copy your message and keep it — nothing is lost.</span>
+        <span>The academy hasn’t given us its WhatsApp number yet, so this preview can’t open a chat. Copy your message and keep it. Nothing is lost.</span>
       </div>
       <button className="button button-green" onClick={copy}>
         {copied ? <Check size={17} /> : <Copy size={17} />}{copied ? 'Message copied' : 'Copy my message'}
       </button>
     </>}
-    <small className="dialog-note">Nothing you type here is stored by this website or sent to us until you send it yourself.</small>
+    <small className="dialog-note">Nothing you type here is stored by this website, and nothing reaches us until you send it yourself.</small>
   </dialog>;
 }

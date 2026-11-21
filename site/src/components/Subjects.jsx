@@ -22,9 +22,9 @@ export function Subjects({ compact = false }) {
     <div className="container">
       <div className="section-heading">
         <div>
-          <span className="eyebrow">NOTHING IS A FIXED PACKAGE</span>
+          <span className="eyebrow">NOTHING HERE COMES IN A BOX</span>
           <h2 id="subjects-title">Choose what you want to learn.<br /><em>We’ll build the syllabus around it.</em></h2>
-          <p>Tap anything that interests you. One subject is a perfectly good start, and your mentor shapes whatever you choose into a single course.</p>
+          <p>Tap anything that speaks to you. One subject is a real beginning, and your mentor will weave whatever you choose into a single course.</p>
         </div>
         {!compact && <Link className="text-link" to="/learn">How a personalised course works <ArrowUpRight size={17} /></Link>}
       </div>
@@ -52,7 +52,7 @@ export function Subjects({ compact = false }) {
             <Link className="text-link" to="/plan#plan">Add your days and timings <ArrowUpRight size={15} /></Link>
             <ChatButton context="subjects" message={planMessage({ ...plan, track: 'self' })} light>Ask about this</ChatButton>
           </div>
-        </> : <p className="step-note">Nothing chosen yet. Your picks are saved on this device as you go.</p>}
+        </> : <p className="step-note">Nothing chosen yet. Whatever you tap stays saved on this device.</p>}
       </div>
     </div>
   </section>;

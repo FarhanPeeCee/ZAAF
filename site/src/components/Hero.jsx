@@ -42,9 +42,9 @@ export function Hero() {
           <span className="heading-star" aria-hidden="true">✳</span>
         </Reveal>
         <Reveal as="p" delay={120}>
-          Learn the Qur’an, Hifz, Hadith, Fiqh or Arabic on a course you build yourself,
-          with a mentor who plans it around your life. And one-to-one tuition for children
-          keeping pace with their madrassa.
+          Pick up the learning you have been meaning to come back to. You choose the subjects,
+          your mentor plans the lessons around your week, and nobody hurries you. We also sit
+          with children who need a little help keeping up at madrassa.
         </Reveal>
         <Reveal className="hero-actions" delay={180}>
           <ChatButton context="hero">Let’s talk on WhatsApp</ChatButton>
@@ -63,7 +63,7 @@ export function Hero() {
         </div>
         <div className="hero-note">
           <span className="note-icon"><Heart size={20} strokeWidth={1.4} /></span>
-          <div>One mentor. One learner.<small>Space to ask. Time to understand.</small></div>
+          <div>One mentor. One learner.<small>Room to ask. Time to understand.</small></div>
         </div>
         <div className="handwritten">Start where you are.<span aria-hidden="true">⤴</span></div>
         <span className="image-index">01 / A SPACE TO GROW</span>

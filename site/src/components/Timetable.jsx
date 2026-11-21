@@ -6,8 +6,8 @@ import { usePlan } from '../lib/plan';
 import { ChatButton, Segmented } from './ui';
 import { Reveal } from '../lib/motion';
 
-// DIA-02: how a timetable is actually agreed — days, timing and language —
-// shown by letting a parent move the pieces rather than describing it.
+// DIA-02: how a timetable is actually agreed (days, timing and language),
+// shown by letting her move the pieces rather than describing it.
 export function TimetableDiagram() {
   const { plan, set, toggleDay } = usePlan();
   const [zoneId, setZoneId] = useState(plan.zoneId || 'AE');
@@ -19,9 +19,9 @@ export function TimetableDiagram() {
   return <section className="section timetable-section" aria-labelledby="timetable-title">
     <div className="container">
       <div className="centered-heading">
-        <span className="eyebrow">THE TIME DIFFERENCE, SOLVED OUT LOUD</span>
+        <span className="eyebrow">THE TIME DIFFERENCE, SAID OUT LOUD</span>
         <h2 id="timetable-title">Your evening. Her teaching hours.</h2>
-        <p>Kerala runs an hour and a half to two and a half hours ahead of the Gulf. Move the pieces below and see the lesson in both clocks at once.</p>
+        <p>Kerala runs an hour and a half to two and a half hours ahead of the Gulf. Move the pieces below and see the lesson on both clocks at once.</p>
       </div>
 
       <Reveal className="timetable">
@@ -85,12 +85,12 @@ export function TimetableDiagram() {
             </div>
           </div>
           <p className={`comfort comfort-${comfort}`}>
-            {comfort === 'easy' && 'That lands inside normal teaching hours in Kerala. Easy to staff.'}
-            {comfort === 'stretch' && 'That is late evening in Kerala. Often possible — worth asking before you plan around it.'}
-            {comfort === 'late' && 'That falls outside teaching hours in Kerala. Tell us and we will suggest the nearest slot that works.'}
+            {comfort === 'easy' && 'That sits well inside teaching hours in Kerala. Easy to arrange.'}
+            {comfort === 'stretch' && 'That is late evening in Kerala. Often possible, but ask us before you plan your week around it.'}
+            {comfort === 'late' && 'That falls past teaching hours in Kerala. Tell us, and we will suggest the nearest hour that works.'}
           </p>
           <ChatButton context="timetable" message={buildMessage(plan, zone, slot)}>Ask for this timetable</ChatButton>
-          <small>Timings are agreed with you and depend on teacher availability. Nothing here is a booking.</small>
+          <small>Timings are agreed with you, and depend on who is free to teach. Nothing here is a booking.</small>
         </div>
       </Reveal>
     </div>

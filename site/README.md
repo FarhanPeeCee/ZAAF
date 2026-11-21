@@ -1,4 +1,4 @@
-# Zaaf Academy — website
+# Zaaf Academy website
 
 A React + Vite single-page site for Zaaf Academy: one-to-one Islamic learning for
 women, from Kerala. It stores nothing on a server, has no forms or accounts, and
@@ -8,12 +8,12 @@ hands every enquiry to WhatsApp with the conversation already written.
 
 | Track | Who | What the site asks her |
 | --- | --- | --- |
-| **Personalised course** (the main category, `/learn`) | Any woman, at any age — no madrassa and no previous study needed | Subjects, where she is starting from, what she is hoping for, language, days, timing |
+| **Personalised course** (the main category, `/learn`) | Any woman, at any age, with no madrassa and no previous study needed | Subjects, where she is starting from, what she is hoping for, language, days, timing |
 | **Madrassa tuition** (`/classes`) | A child already studying in a Samastha madrassa, SKIMVB or SKSVB, Classes 1–12 | Board, class, language, days, timing |
 
 The personalised course is the one Zaaf leads with: the learner chooses her
 subjects and agrees a syllabus, a pace and a timetable with a mentor. Nothing on
-the site is a fixed package, so there is no catalogue of courses to maintain —
+the site is a fixed package, so there is no catalogue of courses to maintain.
 `SUBJECTS` in `src/lib/config.js` is the whole list, and the mentor does the rest.
 
 ```bash
@@ -51,8 +51,8 @@ src/
 
 ### The plan builder
 
-`/plan` (and a compact copy on the home page) starts with one question — who the
-learning is for — and then asks six in total on either track, composing the
+`/plan` (and a compact copy on the home page) starts with one question, who the
+learning is for, and then asks six in total on either track, composing the
 WhatsApp message live as she answers. The plan is kept in `localStorage` only
 (`zaaf.plan.v2`), so a returning visitor finds it waiting and every CTA on the
 site can send it. Clearing browser data removes it; it never reaches a server.

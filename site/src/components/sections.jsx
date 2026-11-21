@@ -20,10 +20,10 @@ export function TrustStrip() {
 }
 
 export const choices = [
-  [BookOpen, 'Your syllabus', 'Choose the subjects. Your mentor turns them into a plan with a beginning, a next step and a pace you agree.'],
-  [CalendarDays, 'Your days', 'One session a week or four — a weekly rhythm that fits the life you already have.'],
-  [Clock3, 'Your timings', 'After work, after the children sleep, early morning. We work around your week, across the time difference.'],
-  [Sprout, 'Your own pace', 'Time to revisit, ask again, and grow in confidence. Nobody is keeping up with a group.'],
+  [BookOpen, 'Your syllabus', 'You choose the subjects. Your mentor turns them into a plan with a beginning, a next step and a pace you both agree.'],
+  [CalendarDays, 'Your days', 'One session a week, or four. Whatever fits the week you already have.'],
+  [Clock3, 'Your timings', 'After work, after the children are asleep, early morning before the house wakes. We work around you.'],
+  [Sprout, 'Your own pace', 'Time to go back over something, to ask again, to let it settle. Nobody is racing you.'],
 ];
 
 export function Flexibility() {
@@ -32,7 +32,7 @@ export function Flexibility() {
       <Reveal className="flexibility-intro">
         <span className="eyebrow">BUILT AROUND YOUR LIFE</span>
         <h2>One mentor.<br />Your timetable.<br /><em>A better fit.</em></h2>
-        <p>Life in the Gulf doesn’t run on Kerala time, and no two learners want the same thing. That is why nothing here is a fixed package.</p>
+        <p>Life in the Gulf does not run on Kerala time, and no two women want the same thing from their learning. That is why nothing here comes ready-made.</p>
         <Link className="text-link" to="/plan#plan">Try it on your own week <ArrowUpRight size={18} /></Link>
       </Reveal>
       <div className="choices-grid">
@@ -49,10 +49,10 @@ export function Flexibility() {
 // How a personalised course is actually agreed. The collaboration with the
 // mentor is the product, so it is drawn out rather than summarised in a line.
 const mentorSteps = [
-  [ClipboardList, '01', 'Say what you want to learn.', 'Subjects, where you are starting from and what you are hoping for. There is no entrance test and no wrong answer.'],
-  [MessagesSquare, '02', 'Meet your mentor.', 'A first conversation, one to one. She listens to what you already know and what you would like to be able to do.'],
-  [BookOpen, '03', 'Agree the syllabus together.', 'She proposes an order, a pace and a first milestone. You change what does not fit. It is your course.'],
-  [Repeat, '04', 'Sessions, reviewed as you go.', 'At your timings, in your language. When life changes, the plan changes with it — slow down, pause, or add a subject.'],
+  [ClipboardList, '01', 'Tell us what you want to learn.', 'The subjects, where you are starting from, what you are hoping for. There is no test, and no wrong answer.'],
+  [MessagesSquare, '02', 'Meet your mentor.', 'One conversation, just the two of you. She listens for what you already know and what you would love to be able to do.'],
+  [BookOpen, '03', 'Agree the syllabus together.', 'She suggests an order, a pace and a first milestone. You change whatever does not fit. The course is yours.'],
+  [Repeat, '04', 'Sessions, and a plan that bends.', 'At your timings, in your language. When life gets heavy you slow down or pause, and nothing is lost.'],
 ];
 
 export function MentorFlow() {
@@ -61,7 +61,7 @@ export function MentorFlow() {
       <div className="centered-heading">
         <span className="eyebrow">A COURSE MADE WITH YOU, NOT HANDED TO YOU</span>
         <h2 id="mentor-flow-title">How a personalised course comes together.</h2>
-        <p>No cohorts, no enrolment window, no syllabus decided before anyone met you.</p>
+        <p>No cohorts. No enrolment window. No syllabus decided before anyone has met you.</p>
       </div>
       <div className="mentor-steps">
         {mentorSteps.map(([Icon, n, title, text], i) => <Reveal className="mentor-step" key={n} delay={i * 85}>
@@ -81,13 +81,13 @@ export function Steps() {
       <div className="centered-heading">
         <span className="eyebrow">A CONVERSATION IS ALL IT TAKES</span>
         <h2>A simple start. A steady journey.</h2>
-        <p>No forms, no accounts, no complicated sign-ups. Just tell us what you would like to learn.</p>
+        <p>No forms, no accounts, nothing to sign up for. Just tell us what you would like to learn.</p>
       </div>
       <div className="steps">
         {[
-          ['01', 'Build the plan.', 'Choose your subjects or her class, then the language, days and timing. It takes about a minute.'],
-          ['02', 'Send it on WhatsApp.', 'Your choices travel with the message, so the first reply can already be useful.'],
-          ['03', 'Start learning.', 'Meet your mentor, agree the syllabus together and begin one-to-one sessions.'],
+          ['01', 'Build the plan.', 'Choose your subjects, or her class, then the language, days and timing. A minute, no more.'],
+          ['02', 'Send it on WhatsApp.', 'Everything you chose travels with the message, so the first reply can actually help you.'],
+          ['03', 'Begin.', 'Meet your mentor, agree the syllabus between you, and start.'],
         ].map(([n, title, text], i) => <Reveal className="step" key={n} delay={i * 90}>
           <span className="step-number">{n}</span>
           <h3>{title}</h3>
@@ -111,7 +111,7 @@ export function TeacherTeaser() {
       <Reveal>
         <span className="eyebrow">REAL CARE, ON THE OTHER SIDE OF THE SCREEN</span>
         <h2>A mentor who makes<br />room for <em>every question.</em></h2>
-        <p>Women-led and taught by women from Kerala. A one-to-one space where you can say “I don’t understand” — at eight years old or at forty-eight — and find the time and attention to try again.</p>
+        <p>Women from Kerala, teaching women and girls. A quiet space where you can say “I haven’t understood this”, at eight years old or at forty-eight, and be met with patience rather than a sigh.</p>
         <Link className="text-link" to="/teachers">About our mentors <ArrowUpRight size={18} /></Link>
       </Reveal>
     </div>

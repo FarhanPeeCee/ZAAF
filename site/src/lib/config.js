@@ -25,7 +25,7 @@ export const CLASS_NUMBERS = Array.from({ length: 12 }, (_, i) => i + 1);
 export const BOYS_UP_TO = 4;
 
 // Typical age for each class, supplied by the teaching lead. Marked as
-// indicative in the interface — a child may sit a class above or below.
+// a rough guide in the interface: a child may sit a class above or below.
 export const TYPICAL_AGE = {
   1: 5, 2: 6, 3: 7, 4: 8, 5: 9, 6: 10,
   7: 11, 8: 12, 9: 13, 10: 14, 11: 15, 12: 16,
@@ -70,51 +70,51 @@ export const TRACKS = [
     id: 'self',
     label: 'For myself',
     short: 'Personalised course',
-    title: 'Design my own course',
-    blurb: 'Choose what you want to learn — Qur’an, Hifz, Hadith, Fiqh, Arabic and more — and build the syllabus and the timetable together with your mentor.',
-    who: 'Any woman, at any age. No madrassa, no previous study and no entrance test needed.',
+    title: 'Start a course of my own',
+    blurb: 'You choose what you want to learn. Qur\u2019an, Hifz, Hadith, Fiqh, Arabic. Then you and your mentor shape the lessons, the pace and the timings around the life you already have.',
+    who: 'Any woman, at any age. You need no madrassa behind you, and nobody will test you.',
     path: '/learn',
   },
   {
     id: 'child',
     label: 'For my child',
     short: 'Madrassa tuition',
-    title: 'Support my child’s madrassa',
-    blurb: 'One-to-one help alongside the madrassa she already attends — the same SKIMVB or SKSVB syllabus, Classes 1 to 12, at timings you choose.',
+    title: 'Help my child keep up',
+    blurb: 'Quiet, one-to-one help beside the madrassa she already attends. The same SKIMVB or SKSVB lessons, Classes 1 to 12, at the hours that suit your family.',
     who: 'Girls and women at every class, and boys up to Class 4.',
     path: '/classes',
   },
 ];
 
-// What a personalised course can be built from. Subjects are chosen by the
-// learner and shaped into a syllabus by her mentor; nothing here is a fixed
-// package or a graded programme.
+// What a personalised course can be built from. The learner chooses, and her
+// mentor shapes the choices into one syllabus. Nothing here is a fixed package
+// or a graded programme.
 export const SUBJECTS = [
-  { id: 'quran', label: 'Qur’an reading & Tajweed', note: 'From the letters themselves to careful, confident recitation.' },
-  { id: 'hifz', label: 'Hifz — memorisation', note: 'A memorisation plan at a pace you can actually keep, with regular revision.' },
-  { id: 'tafsir', label: 'Tafsir', note: 'Meaning and context, passage by passage, as slowly as you like.' },
-  { id: 'hadith', label: 'Hadith', note: 'Selected narrations read together, with explanation and discussion.' },
-  { id: 'fiqh', label: 'Fiqh', note: 'Prayer, purity, fasting, zakat and the rulings of an ordinary day.' },
-  { id: 'aqeedah', label: 'Aqeedah', note: 'The foundations of belief, explained in plain words.' },
-  { id: 'arabic', label: 'Arabic', note: 'Reading and understanding the language of the text itself.' },
-  { id: 'seerah', label: 'Seerah & Islamic history', note: 'The life of the Prophet ﷺ and the generations that followed.' },
-  { id: 'adkar', label: 'Duas & daily practice', note: 'What to say and do, from waking to sleeping.' },
+  { id: 'quran', label: 'Qur\u2019an reading & Tajweed', note: 'From the first letters to a recitation you feel calm about.' },
+  { id: 'hifz', label: 'Hifz (memorisation)', note: 'A plan you can actually keep, with revision built in so nothing slips away.' },
+  { id: 'tafsir', label: 'Tafsir', note: 'What the words mean, and what they ask of you. As slowly as you like.' },
+  { id: 'hadith', label: 'Hadith', note: 'Narrations read together, with the story and the sense behind them.' },
+  { id: 'fiqh', label: 'Fiqh', note: 'Prayer, purity, fasting, zakat. The questions of an ordinary day, answered plainly.' },
+  { id: 'aqeedah', label: 'Aqeedah', note: 'What you were taught as a child, explained again in words that settle it.' },
+  { id: 'arabic', label: 'Arabic', note: 'Enough of the language to meet the text yourself.' },
+  { id: 'seerah', label: 'Seerah & Islamic history', note: 'The life of the Prophet \ufdfa, and the people who carried it after him.' },
+  { id: 'adkar', label: 'Duas & daily practice', note: 'What to say and do, from waking until you sleep.' },
 ];
 
 export const STARTING_POINTS = [
-  { value: 'new', label: 'Starting from the beginning', note: 'Never studied this formally, or starting again after a long gap.' },
-  { value: 'some', label: 'I know a little', note: 'Can manage some of it, but slowly and with gaps.' },
-  { value: 'steady', label: 'Comfortable — I want depth', note: 'Studied before and looking to go further.' },
+  { value: 'new', label: 'I am starting from the beginning', note: 'You have never studied this properly, or it has been a very long time. That is a fine place to begin.' },
+  { value: 'some', label: 'I know a little', note: 'You can manage some of it, slowly, with gaps you would like to close.' },
+  { value: 'steady', label: 'I am comfortable, and want more', note: 'You have studied before and you are ready to go deeper.' },
 ];
 
-// Why she is learning. It changes the syllabus more than the subject does, so
-// the mentor is told before the first session rather than after it.
+// Why she is learning. It shapes the syllabus more than the subject does, so her
+// mentor hears it before the first session rather than after it.
 export const INTENTIONS = [
-  { value: 'understand', label: 'To understand my prayers and reading' },
-  { value: 'memorise', label: 'To memorise, steadily' },
-  { value: 'teach', label: 'To teach my children at home' },
-  { value: 'depth', label: 'To study a subject properly, in depth' },
-  { value: 'habit', label: 'To build a steady habit of learning' },
+  { value: 'understand', label: 'To understand what I say in my prayers' },
+  { value: 'memorise', label: 'To memorise, a little at a time' },
+  { value: 'teach', label: 'To teach my own children at home' },
+  { value: 'depth', label: 'To study one subject properly' },
+  { value: 'habit', label: 'To keep a steady habit of learning' },
 ];
 
 export function subjectById(id) {

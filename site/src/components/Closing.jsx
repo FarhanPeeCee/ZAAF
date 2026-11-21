@@ -11,9 +11,9 @@ export function Closing() {
     <div className="container closing-inner">
       <div className="closing-decoration" aria-hidden="true"><Sprout size={94} strokeWidth={.7} /></div>
       <div>
-        <span className="eyebrow">A LITTLE HELP CAN MAKE A BIG DIFFERENCE</span>
+        <span className="eyebrow">A LITTLE HELP GOES A LONG WAY</span>
         <h2>Let’s find what works<br />for you.</h2>
-        <p>{done ? 'Your plan is saved on this device. Send it whenever you’re ready.' : 'Tell us what you’d like to learn. We’ll take it from there.'}</p>
+        <p>{done ? 'Your plan is saved on this device. Send it whenever you’re ready.' : 'Tell us what you’d like to learn, and we’ll take it from there.'}</p>
       </div>
       <div className="closing-action">
         <ChatButton light context={done ? 'closing-plan' : 'closing'} message={done ? planMessage(plan) : undefined}>

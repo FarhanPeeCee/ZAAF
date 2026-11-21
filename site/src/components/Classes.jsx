@@ -50,7 +50,7 @@ function ClassCards({ board, filter, onChoose, selected }) {
   </div>;
 }
 
-// DIA-01: the twelve classes as a progression, with typical ages and the board
+// DIA-01: the twelve classes as a progression, with usual ages and the board
 // exam years marked. The table view below is its text equivalent.
 function ClassLadder({ board, filter, onChoose }) {
   return <div className="ladder" role="list">
@@ -80,7 +80,7 @@ function ClassLadder({ board, filter, onChoose }) {
 function ClassTable({ board }) {
   return <div className="table-wrap">
     <table className="class-table">
-      <caption>Classes 1 to 12 on the {board} syllabus, with the typical age and who may join. Ages are indicative; the madrassa decides the class.</caption>
+      <caption>Classes 1 to 12 on the {board} syllabus, with the usual age and who may join. Ages are a rough guide. Her madrassa decides the class.</caption>
       <thead>
         <tr><th scope="col">Class</th><th scope="col">Typical age</th><th scope="col">Who may join</th><th scope="col">Board exam year</th></tr>
       </thead>
@@ -89,7 +89,7 @@ function ClassTable({ board }) {
           <th scope="row">Class {n}</th>
           <td>{TYPICAL_AGE[n]}</td>
           <td>{n <= BOYS_UP_TO ? 'Girls and boys' : 'Girls and women'}</td>
-          <td>{EXAM_CLASSES.includes(n) ? 'Yes' : '—'}</td>
+          <td>{EXAM_CLASSES.includes(n) ? 'Yes' : 'No'}</td>
         </tr>)}
       </tbody>
     </table>
@@ -106,9 +106,9 @@ export function ClassesSection({ standalone = false, initialBoard }) {
     <div className="container">
       <div className="section-heading">
         <div>
-          <span className="eyebrow">THE SAME SYLLABUS. A LITTLE EXTRA HELP.</span>
+          <span className="eyebrow">THE SAME LESSONS. A LITTLE EXTRA HELP.</span>
           <h2>Find your child’s class.</h2>
-          <p>Two familiar syllabi. Twelve classes. Support at every step.</p>
+          <p>Two familiar syllabi. Twelve classes. Someone beside her at every one.</p>
         </div>
         <div className="board-control">
           <span>Choose your board</span>
@@ -155,7 +155,7 @@ export function ClassesSection({ standalone = false, initialBoard }) {
       <div className="exam-banner">
         <div className="exam-icon"><GraduationCap size={29} strokeWidth={1.3} /></div>
         <div>
-          <h3>An exam coming up? Let’s take it one lesson at a time.</h3>
+          <h3>An exam coming? Let’s take it one lesson at a time.</h3>
           <p>Focused, one-to-one preparation for Classes 5, 7, 10 and 12.</p>
         </div>
         <Link className="text-link" to="/exams">Explore exam support <ArrowUpRight size={18} /></Link>

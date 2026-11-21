@@ -15,8 +15,8 @@ import { Reveal } from '../lib/motion';
 
 const comfortCopy = {
   easy: 'A comfortable hour for a mentor in Kerala.',
-  stretch: 'Late in Kerala, but usually possible. Worth asking.',
-  late: 'Outside normal teaching hours in Kerala — ask us what else is open.',
+  stretch: 'Late in Kerala, though usually possible. Worth asking.',
+  late: 'Past teaching hours in Kerala. Tell us, and we will find the nearest hour that works.',
 };
 
 /* --- the choice everything else follows from ------------------------------ */
@@ -55,7 +55,7 @@ function SubjectPicker({ chosen, onToggle }) {
     <div className="subject-notes" aria-live="polite">
       {chosen.length
         ? orderedSubjects(chosen).map(s => <p key={s.id}><strong>{s.label}.</strong> {s.note}</p>)
-        : <p className="step-note">Choose as many as you like, or just one. Your mentor shapes them into a single syllabus — this is not a list of fixed packages.</p>}
+        : <p className="step-note">Choose as many as you like, or only one. Your mentor weaves them into a single syllabus. This is not a list of packages.</p>}
     </div>
   </>;
 }
@@ -77,8 +77,8 @@ function AgeHelper({ onPick }) {
         value={age} onChange={e => setAge(e.target.value)} />
       <p aria-live="polite">
         {suggestion
-          ? <>A child of {age} is usually around <button type="button" className="inline-pick" onClick={() => onPick(suggestion)}>Class {suggestion}</button>. Your madrassa decides the class, so pick the one she actually attends.</>
-          : 'Enter an age and we’ll suggest the usual class. Indicative only.'}
+          ? <>A child of {age} is usually around <button type="button" className="inline-pick" onClick={() => onPick(suggestion)}>Class {suggestion}</button>. Her madrassa decides the class, so choose the one she actually sits in.</>
+          : 'Tell us her age and we’ll suggest the usual class. A rough guide, nothing more.'}
       </p>
     </div>
   </div>;
@@ -129,7 +129,7 @@ export function Planner({ compact = false, lockTrack = null }) {
   const headings = self
     ? { eyebrow: 'YOUR SUBJECTS. YOUR PACE. YOUR TIMETABLE.', title: <>Build the course<br /><em>you have been meaning to start.</em></> }
     : track === 'child'
-      ? { eyebrow: 'THE SAME SYLLABUS, WITH TIME TO ASK', title: <>Shape your child’s week.<br /><em>We’ll pick it up from there.</em></> }
+      ? { eyebrow: 'THE SAME LESSONS, WITH TIME TO ASK', title: <>Shape your child’s week.<br /><em>We’ll take it from there.</em></> }
       : { eyebrow: 'BUILD IT WITH US, BEFORE YOU MESSAGE', title: <>Start where you are.<br /><em>We’ll shape the rest together.</em></> };
 
   return <section id="plan" className={`section planner-section ${compact ? 'is-compact' : ''} ${self ? 'is-self' : ''}`} aria-labelledby="planner-title">
@@ -138,7 +138,7 @@ export function Planner({ compact = false, lockTrack = null }) {
         <div>
           <span className="eyebrow"><Sparkles size={12} /> {headings.eyebrow}</span>
           <h2 id="planner-title">{headings.title}</h2>
-          <p>A few small choices. Nothing is sent anywhere until you tap WhatsApp, and we carry every answer into the message so there is less to explain.</p>
+          <p>A few small choices. Nothing reaches us until you tap WhatsApp, and every answer travels with the message so you have less to explain.</p>
         </div>
         <div className="planner-progress" aria-live="polite">
           <svg viewBox="0 0 44 44" width="56" height="56" aria-hidden="true">
@@ -172,7 +172,7 @@ export function Planner({ compact = false, lockTrack = null }) {
               <p className="step-note">
                 {plan.startingPoint
                   ? STARTING_POINTS.find(s => s.value === plan.startingPoint).note
-                  : 'There is no entrance test and no wrong answer. It only tells your mentor where to begin.'}
+                  : 'There is no test, and no wrong answer. It only tells your mentor where to begin.'}
               </p>
               <span className="field-label">And what are you hoping for?</span>
               <div className="intention-picker" role="radiogroup" aria-label="What you are hoping for">
@@ -191,7 +191,7 @@ export function Planner({ compact = false, lockTrack = null }) {
           {track === 'child' && <>
             <Step tag={lockTrack ? '01' : '02'} title="Which board does she follow?" icon={GraduationCap}>
               <Segmented label="Choose your syllabus board" name="board" options={BOARDS} value={plan.board} onChange={v => set({ board: v })} />
-              <p className="step-note">We support both. A parent is usually loyal to one, so we start here.</p>
+              <p className="step-note">We teach both. Most families are loyal to one, so we begin there.</p>
             </Step>
             <Step tag={lockTrack ? '02' : '03'} title="Which class is she in?">
               <div className="class-picker" role="radiogroup" aria-label="Choose a class">
@@ -215,7 +215,7 @@ export function Planner({ compact = false, lockTrack = null }) {
           {track && <>
             <Step tag={lockTrack ? '03' : '04'} title={self ? 'In which language should we teach?' : 'In which language should she learn?'} icon={Languages}>
               <Segmented label="Teaching language" name="language" options={LANGUAGES} value={plan.language} onChange={v => set({ language: v })} />
-              <p className="step-note">Understanding comes first. The language also affects the fee, so it is worth saying now.</p>
+              <p className="step-note">Understanding comes first. The language also changes the fee, so it helps to say it now.</p>
             </Step>
 
             <Step tag={lockTrack ? '04' : '05'} title="Which days suit your week?" icon={CalendarDays}>
@@ -232,7 +232,7 @@ export function Planner({ compact = false, lockTrack = null }) {
                 {plan.days.length
                   ? `${plan.days.length} ${plan.days.length === 1 ? 'session' : 'sessions'} a week: ${orderedDays(plan.days).map(d => d.label).join(', ')}.`
                   : self
-                    ? 'One steady session a week is a real start. Two or three if you want to move faster.'
+                    ? 'One steady session a week is a real beginning. Two or three if you would like to move faster.'
                     : 'Most families choose two or three. You can change this later.'}
               </p>
             </Step>
@@ -257,7 +257,7 @@ export function Planner({ compact = false, lockTrack = null }) {
                   >{format(parse(slotValue))}{zone && <small>{format(toKerala(slotValue, zone))} IST</small>}</button>;
                 })}
               </div>
-              <p className="step-note">{zone ? 'Times are shown in your own time first, then in Kerala time — the gap is the whole reason this page exists.' : 'Choose your country to see each time in Kerala time too.'}</p>
+              <p className="step-note">{zone ? 'Your time first, then hers in Kerala. That gap is the whole reason this page exists.' : 'Choose your country and we’ll show every time in Kerala time too.'}</p>
             </Step>
           </>}
         </div>
@@ -265,7 +265,7 @@ export function Planner({ compact = false, lockTrack = null }) {
         <aside className="planner-result">
           <span className="eyebrow">YOUR MESSAGE, SO FAR</span>
           <h3>{track ? 'Ready when you are.' : 'Start with one choice.'}</h3>
-          {!track && <p className="step-note">Tell us who the learning is for and the rest of the questions appear. Most people are here for themselves.</p>}
+          {!track && <p className="step-note">Tell us who the learning is for, and the rest of the questions appear. Most women are here for themselves.</p>}
           <WeekPreview days={plan.days} slot={plan.slot} zoneId={plan.zoneId} />
           <div className="message-draft" aria-live="polite">{message}</div>
           <ChatButton message={message} context={`planner-${track || 'none'}`}>
@@ -275,7 +275,7 @@ export function Planner({ compact = false, lockTrack = null }) {
             <button type="button" className="reset-plan" onClick={reset}><RotateCcw size={13} /> Start again</button>
             <Link to="/fees">How the fee is worked out <ArrowUpRight size={13} /></Link>
           </div>
-          <small>Your choices stay on this device so you can come back to them. Nothing is sent to us until you tap the button.</small>
+          <small>Your choices stay on this device, so you can come back to them. Nothing reaches us until you tap the button.</small>
         </aside>
       </div>
     </div>
@@ -292,7 +292,7 @@ export function PlanNudge() {
     <div>
       <span className="eyebrow">YOUR SAVED PLAN · {plan.track === 'self' ? 'PERSONALISED COURSE' : 'MADRASSA TUITION'}</span>
       <strong>{summary.join(' · ')}</strong>
-      <small>{done} of {total} answered{done < total ? ' — add the rest whenever you like.' : ' — all set.'}</small>
+      <small>{done} of {total} answered{done < total ? '. Add the rest whenever you like.' : '. All set.'}</small>
     </div>
     <div className="plan-nudge-actions">
       <Link className="text-link" to="/plan#plan">Open my plan <ArrowUpRight size={15} /></Link>

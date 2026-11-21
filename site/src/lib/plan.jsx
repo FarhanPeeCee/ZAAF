@@ -8,7 +8,7 @@ import { dayShift, format, parse, toKerala, zoneById } from './time';
 const STORE = 'zaaf.plan.v2';
 
 const empty = {
-  track: null,          // 'self' — her own course · 'child' — madrassa tuition
+  track: null,          // 'self' is her own course, 'child' is madrassa tuition
   subjects: [],
   startingPoint: null,
   intention: null,
