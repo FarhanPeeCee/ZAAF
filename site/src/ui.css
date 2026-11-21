@@ -452,3 +452,6 @@ body.no-scroll{overflow:hidden}
 .planner-section.is-self .planner-step:hover{border-color:#cdd8a2}
 
 .reply-local{display:block;font-size:9.5px;line-height:1.7;color:#878d95;margin-top:5px}
+
+.founder-role{display:block;font-size:10px;letter-spacing:.4px;color:#6d7580;margin-top:4px}
+.about-layout strong{font-weight:550;color:#3c4349}

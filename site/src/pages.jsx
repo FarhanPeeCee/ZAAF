@@ -303,7 +303,8 @@ export function About() {
       <div>
         <span className="eyebrow">TWO WAYS TO LEARN, ONE IDEA</span>
         <h2>Sometimes, a little<br />extra time is everything.</h2>
-        <p>Zaaf is a women-led academy teaching one to one, online. Most of the women who come to us are learning for themselves. They choose their subjects, whether that is Qur’an and Tajweed, Hifz, Tafsir, Hadith, Fiqh, Aqeedah, Arabic or Seerah, and then build a syllabus and a timetable with a mentor. There is no cohort to join and no package to pick from.</p>
+        <p>Zaaf was founded by <strong>Zayana Firdousi Swafiya</strong>, who leads it as Founder and CEO.</p>
+        <p>It is a women-led academy teaching one to one, online. Most of the women who come to us are learning for themselves. They choose their subjects, whether that is Qur’an and Tajweed, Hifz, Tafsir, Hadith, Fiqh, Aqeedah, Arabic or Seerah, and then build a syllabus and a timetable with a mentor. There is no cohort to join and no package to pick from.</p>
         <p>Beside that, we give one-to-one tuition to children already studying in the Samastha madrassa system, on both the SKIMVB and SKSVB syllabi, from Class 1 to Class 12. Those classes sit beside a madrassa. They never replace one.</p>
         <p>Girls and women are welcome at any age, whether or not they have ever studied formally. Boys are taught in the tuition classes up to Class 4. You choose the days, the timings and the language, and we work around the hours between Kerala and the Gulf.</p>
         <div className="info-notice">

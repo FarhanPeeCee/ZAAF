@@ -174,8 +174,9 @@ export function FounderVoice() {
         <p>Kerala or the Gulf, after work or once the children are asleep. I want this to feel like somewhere you can turn. A familiar language, a steady rhythm, and someone on your side.”</p>
         <div className="founder-signoff">
           <span className="founder-signature">With care,</span>
-          <strong>The Founder, Zaaf Academy</strong>
-          <small>Suggested wording. The founder has not approved this yet.</small>
+          <strong>Zayana Firdousi Swafiya</strong>
+          <span className="founder-role">Founder &amp; CEO, Zaaf Academy</span>
+          <small>The wording of this letter is a draft and has not been approved by her yet.</small>
         </div>
       </Reveal>
     </div>
