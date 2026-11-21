@@ -64,7 +64,7 @@ export function Hero() {
           <span className="note-icon"><Heart size={20} strokeWidth={1.4} /></span>
           <div>One mentor. One learner.<small>Room to ask. Time to understand.</small></div>
         </div>
-        <div className="handwritten">Start where you are.<span aria-hidden="true">⤴</span></div>
+        <div className="handwritten">Start where you are.</div>
         <span className="image-index">01 / A SPACE TO GROW</span>
       </div>
     </div>
