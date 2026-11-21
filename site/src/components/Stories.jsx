@@ -164,7 +164,6 @@ export function FounderVoice() {
         <span className="founder-symbol" aria-hidden="true"><Sprout size={34} strokeWidth={1.1} /></span>
         <span className="eyebrow">A NOTE FROM THE FOUNDER</span>
         <h2 id="founder-title">Everyone deserves<br /><em>time to understand.</em></h2>
-        <span className="draft-label">DRAFT · FOR FOUNDER REVIEW</span>
       </Reveal>
       <Reveal className="founder-letter" delay={120}>
         <p className="founder-salaam">Assalamu alaikum,</p>
@@ -176,7 +175,6 @@ export function FounderVoice() {
           <span className="founder-signature">With care,</span>
           <strong>Zayana Firdousi Swafiya</strong>
           <span className="founder-role">Founder &amp; CEO, Zaaf Academy</span>
-          <small>The wording of this letter is a draft and has not been approved by her yet.</small>
         </div>
       </Reveal>
     </div>
