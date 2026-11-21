@@ -39,7 +39,6 @@ export function Hero() {
         <Reveal as="span" className="eyebrow">ONE-TO-ONE ISLAMIC LEARNING, FOR WOMEN</Reveal>
         <Reveal as="h1" delay={60}>
           Your syllabus.<br />Your pace.<br /><em>Your mentor.</em>
-          <span className="heading-star" aria-hidden="true">✳</span>
         </Reveal>
         <Reveal as="p" delay={120}>
           Pick up the learning you have been meaning to come back to. You choose the subjects,

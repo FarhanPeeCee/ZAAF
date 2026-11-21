@@ -27,7 +27,6 @@
 .hero-copy{padding-block:12px}
 .hero .eyebrow{font-size:9px;letter-spacing:1.7px;margin-bottom:23px}
 .hero h1{font-size:clamp(55px,5.65vw,80px);line-height:1.07;letter-spacing:-2.7px;position:relative;margin-bottom:24px}
-.heading-star{color:#a1b551;position:relative;display:inline-block;margin-left:12px;top:-20px;font-size:38px;line-height:0;font-family:serif;font-weight:400}
 .hero-copy>p{max-width:365px;font-size:13px;line-height:1.9;margin-bottom:26px}
 .hero-actions{display:flex;align-items:center;gap:22px}
 .hero-secondary{font-size:10px;display:flex;align-items:center;gap:8px;white-space:nowrap}
@@ -100,7 +99,6 @@
 .teacher-arch{height:250px;width:225px;border-radius:110px 110px 0 0;background:#cad5dd;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:#495762}
 .teacher-arch span{font-family:'DM Serif Display',serif;font-size:22px;text-align:center;line-height:1.25}
 .teacher-arch em{color:#8b9a4d}
-.art-flower{position:absolute;right:39px;bottom:35px;font-size:82px;color:#94a550;line-height:1}
 .teacher-teaser h2{font-size:40px;margin-bottom:21px}
 .teacher-teaser p{font-size:12px;line-height:1.9;max-width:420px}
 .faq-layout{display:grid;grid-template-columns:1fr 1.3fr;gap:90px}
@@ -278,7 +276,6 @@
 .teacher-teaser-inner{gap:40px}
 .teacher-teaser h2{font-size:32px}
 .teacher-art{height:270px}
-.art-flower{right:6px;font-size:65px}
 .faq-layout{gap:40px;grid-template-columns:1fr 1.2fr}
 .faq-layout h2{font-size:32px}
 .closing-inner{gap:22px}
@@ -375,7 +372,6 @@ h2{font-size:35px;letter-spacing:-.9px}
 .teacher-arch{height:210px;width:210px}
 .teacher-arch>svg{width:49px}
 .teacher-arch span{font-size:20px}
-.art-flower{right:33px;bottom:20px;font-size:72px}
 .teacher-teaser h2{font-size:34px}
 .teacher-teaser p{font-size:12px}
 .faq-layout{display:block}

@@ -106,7 +106,6 @@ export function TeacherTeaser() {
           <BookOpen size={65} strokeWidth={.8} />
           <span>Patience.<br />Understanding.<br /><em>A familiar voice.</em></span>
         </div>
-        <span className="art-flower">✳</span>
       </div>
       <Reveal>
         <span className="eyebrow">REAL CARE, ON THE OTHER SIDE OF THE SCREEN</span>
