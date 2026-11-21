@@ -1,0 +1,78 @@
+# Builds the site and publishes it to GitHub Pages, which serves zaaf.in.
+#
+# site/public/CNAME carries the domain into the build, so the published site
+# answers on zaaf.in rather than on github.io.
+
+name: Deploy zaaf.in
+
+on:
+  push:
+    branches:
+      - main
+      - claude/intelligent-clarke-ypqcrn
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Let a running deploy finish rather than cancelling it halfway.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: site/pnpm-lock.yaml
+
+      - name: Install
+        working-directory: site
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        working-directory: site
+        run: pnpm run build
+
+      # GitHub Pages has no rewrite rules. Routing happens in the browser, so
+      # every unknown path has to be answered with the app itself. Without
+      # this, opening zaaf.in/learn directly, or refreshing it, would show
+      # GitHub's "404 not found" page instead of the site.
+      - name: Answer every path with the app
+        working-directory: site
+        run: cp dist/index.html dist/404.html
+
+      - name: Check the domain and the fallback made it into the build
+        working-directory: site
+        run: |
+          test "$(cat dist/CNAME)" = "zaaf.in"
+          test -s dist/404.html
+          test -s dist/index.html
+
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
