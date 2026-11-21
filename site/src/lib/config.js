@@ -4,16 +4,12 @@
 // show an honest "awaiting confirmation" state instead of a made-up fact.
 // ---------------------------------------------------------------------------
 
-// The WhatsApp Business number, in full international form, digits only.
-// This is what every button on the site opens a chat with.
-export const WHATSAPP_NUMBER = '919895307718';
+// The academy's one number, in full international form, digits only. Every
+// button on the site opens a WhatsApp chat with it.
+export const WHATSAPP_NUMBER = '919656107718';
 
 // The same number written for a human to read, and to copy by hand when a tap
 // fails silently on a laptop with no WhatsApp installed.
-export const WHATSAPP_DISPLAY = '+91 98953 07718';
-
-// The number to call. Keep it separate: the academy answers WhatsApp on one
-// number and the phone on another.
 export const PHONE_DISPLAY = '+91 9656107718';
 export const EMAIL = 'zaafacademy@gmail.com';
 
