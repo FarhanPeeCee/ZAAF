@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { ArrowUpRight, Check, Clock3, Copy, MessageCircle, X } from 'lucide-react';
-import { PHONE_DISPLAY, WHATSAPP_NUMBER } from '../lib/config';
+import { WHATSAPP_DISPLAY, WHATSAPP_NUMBER } from '../lib/config';
 import { track } from '../lib/track';
 
 export function EnquiryDialog({ message, context, close, onCopied }) {
@@ -58,7 +58,7 @@ export function EnquiryDialog({ message, context, close, onCopied }) {
       <button className="button button-plain" onClick={copy}>
         {copied ? <Check size={16} /> : <Copy size={16} />}{copied ? 'Copied' : 'Copy the message instead'}
       </button>
-      {PHONE_DISPLAY && <p className="dialog-fallback">If WhatsApp doesn’t open, message <span className="selectable">{PHONE_DISPLAY}</span> from your phone instead.</p>}
+      {WHATSAPP_DISPLAY && <p className="dialog-fallback">If WhatsApp doesn’t open, message <span className="selectable">{WHATSAPP_DISPLAY}</span> from your phone instead.</p>}
     </> : <>
       <div className="contact-pending">
         <Clock3 size={18} />

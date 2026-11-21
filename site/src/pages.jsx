@@ -370,7 +370,7 @@ export function Contact({ teaching = false }) {
           context={teaching ? 'teach' : 'contact'}
           message={teaching ? 'Assalamu alaikum Zaaf, I would like to apply to teach or mentor.' : (done ? planMessage(plan) : undefined)}
         >{teaching ? 'Ask about mentoring' : done ? 'Send my saved plan' : 'Chat on WhatsApp'}</ChatButton>
-        <small>Business number and reply hours are awaiting confirmation.</small>
+        <small>We answer on WhatsApp. Reply hours are still being agreed, so please don’t take silence personally.</small>
       </aside>
     </section>
   </>;
@@ -403,7 +403,7 @@ export function Privacy() {
       <h3>Your plan stays on your own device.</h3>
       <p>The plan you build, meaning the subjects you pick, where you are starting from, your child’s class and board, the language, the days and the timing, is kept in your browser’s local storage so you can come back to it. It never leaves your device, we cannot read it, and clearing your browser data removes it.</p>
       <h3>Conversations happen on WhatsApp.</h3>
-      <p>Once the academy’s business number is confirmed, WhatsApp buttons will open a conversation with your message ready to send, which you can edit first. WhatsApp handles those messages under its own terms and privacy policy. Avoid sharing sensitive information about children.</p>
+      <p>Every WhatsApp button opens a chat with the academy, with your message written out and ready to send. You can edit it first, and nothing is sent until you send it. From that point WhatsApp handles the conversation under its own terms and privacy policy. Please avoid sharing sensitive information about children there.</p>
       <h3>No analytics service, no cookies.</h3>
       <p>This version sets no cookies and loads no analytics service. When you tap a WhatsApp button, the page notes it in your own browser, recording only the page you were on and whether you are on a phone or a computer, so that a counting tool can be added later if the academy wants one. Nothing is sent anywhere, and nothing identifies you. Hosting providers may keep technical request logs under their own policies.</p>
       <h3>Before launch</h3>

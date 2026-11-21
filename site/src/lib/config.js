@@ -4,14 +4,18 @@
 // show an honest "awaiting confirmation" state instead of a made-up fact.
 // ---------------------------------------------------------------------------
 
-// Full international form, digits only, e.g. '919876543210'. Empty until the
-// academy confirms its public WhatsApp Business number.
-export const WHATSAPP_NUMBER = '';
+// The WhatsApp Business number, in full international form, digits only.
+// This is what every button on the site opens a chat with.
+export const WHATSAPP_NUMBER = '919895307718';
 
-// Shown as selectable text beside every button once set (a tap can fail
-// silently on a laptop with no WhatsApp installed).
-export const PHONE_DISPLAY = '';
-export const EMAIL = '';
+// The same number written for a human to read, and to copy by hand when a tap
+// fails silently on a laptop with no WhatsApp installed.
+export const WHATSAPP_DISPLAY = '+91 98953 07718';
+
+// The number to call. Keep it separate: the academy answers WhatsApp on one
+// number and the phone on another.
+export const PHONE_DISPLAY = '+91 9656107718';
+export const EMAIL = 'zaafacademy@gmail.com';
 
 // Reply window, to be stated in both Indian and Gulf time once agreed.
 // { start: '09:00', end: '21:00' } in India time, plus the promise in hours.

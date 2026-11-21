@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowUpRight, Clock3 } from 'lucide-react';
-import { EMAIL, PHONE_DISPLAY, REPLY_HOURS, REPLY_PROMISE_HOURS } from '../lib/config';
+import { ArrowUpRight, Clock3, MessageCircle, Phone } from 'lucide-react';
+import { EMAIL, PHONE_DISPLAY, REPLY_HOURS, REPLY_PROMISE_HOURS, WHATSAPP_DISPLAY, WHATSAPP_NUMBER } from '../lib/config';
 import { Logo } from './Header';
 
 // The returning visitor should be able to read a basic fact without starting a
@@ -9,10 +9,16 @@ import { Logo } from './Header';
 export function ContactLines({ compact = false }) {
   return <div className={`contact-lines ${compact ? 'is-compact' : ''}`}>
     <div>
-      <span className="field-label">WhatsApp &amp; phone</span>
+      <span className="field-label"><MessageCircle size={13} /> WhatsApp</span>
+      {WHATSAPP_NUMBER
+        ? <a className="selectable" href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank" rel="noreferrer">{WHATSAPP_DISPLAY}</a>
+        : <em>We’re waiting on the academy’s WhatsApp number. It will be printed here in full, as text you can select and copy.</em>}
+    </div>
+    <div>
+      <span className="field-label"><Phone size={13} /> Phone</span>
       {PHONE_DISPLAY
         ? <a className="selectable" href={`tel:${PHONE_DISPLAY.replace(/\s/g, '')}`}>{PHONE_DISPLAY}</a>
-        : <em>We’re waiting on the academy’s business number. It will be printed here in full, as text you can select and copy.</em>}
+        : <em>Still to come.</em>}
     </div>
     <div>
       <span className="field-label">Email</span>
