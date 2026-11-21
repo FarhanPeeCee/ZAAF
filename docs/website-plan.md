@@ -759,3 +759,44 @@ These teach in English or Arabic rather than Malayalam and follow no Kerala syll
 ### What this document does not contain
 
 No fee, teacher name, qualification, student number or review appears here as fact. Each is a marked placeholder with an owner, listed in the content inventory in section 12.
+
+---
+
+## Addendum · Nov 21, 2026 — the personalised course becomes the main category
+
+This document was written when Zaaf was one thing: tuition that supports a child
+through her madrassa syllabus. It is now two, and the larger of them is not in
+the sections above.
+
+**The personalised course.** Any woman, at any age, can join Zaaf without a
+madrassa, without previous study and without an entrance test. She chooses what
+she wants to learn — Qur'an reading and Tajweed, Hifz, Tafsir, Hadith, Fiqh,
+Aqeedah, Arabic, Seerah and Islamic history, duas and daily practice — and then
+agrees a syllabus, a pace and a timetable **with a mentor**, who teaches the
+sessions accordingly. Girls who never joined a madrassa and women returning to
+their learning after many years are the centre of this, not an edge case.
+
+### What that changes in the sections above
+
+| Section | What now needs revising |
+| --- | --- |
+| 1 · Context and goals | Zaaf is a women's academy with two tracks, not a tuition service with one |
+| 2 · Audiences and top tasks | A second primary audience: the adult learner choosing for herself. Her top task is "find out whether I can study what I actually want, at my own pace" |
+| 4 · Information architecture | A personalised-course section sits above the class structure. Classes 1–12 is the shape of the second track only |
+| 5 · Page briefs | A new page brief for the personalised course, and a subject list that is neither a catalogue nor a set of packages |
+| 6 · Content model | A subject record (name, short description, who it suits) replaces nothing but sits beside the class record |
+| 8 · User flows | Flow 1 splits in two. The adult learner's handover carries subjects, starting point and intention rather than board and class |
+| 9 · Voice | Written to a woman about her own learning, not only to a parent about her child's |
+
+### Still open, specific to this track
+
+1. Which subjects Zaaf can actually staff today, and which are aspirational.
+2. Whether Hifz is offered with a defined revision commitment, and what is
+   expected of the learner between sessions.
+3. Session lengths available, and whether they differ by subject.
+4. How a course is paused or ended, and what happens to a part-finished syllabus.
+5. Whether anything is certified or recorded. The site currently says nothing is.
+6. Whether mentors and tuition teachers are the same people, since the site now
+   uses "mentor" for the personalised track and "teacher" for madrassa tuition.
+
+Until these are answered the site states them as pending rather than guessing.

@@ -25,6 +25,16 @@ const sampleFeedback = [
     theme: 'Steadier before the exam',
     quote: 'With the board exam coming, she needed someone to go back through the older chapters with her. Having that hour set aside each week settled all of us.',
   },
+  {
+    country: 'UAE', code: 'AE', className: 'Personalised course · Qur’an & Tajweed',
+    theme: 'Finally, a course of my own',
+    quote: 'I left madrassa as a girl and always meant to go back to it. Starting with just the reading, one evening a week after the children sleep, has been enough to feel I am learning again.',
+  },
+  {
+    country: 'Kuwait', code: 'KW', className: 'Personalised course · Fiqh & Hadith',
+    theme: 'Questions I never got to ask',
+    quote: 'We decided the order of the topics together, which I did not expect. Being able to say “can we stay on this one a little longer” changed how much I actually understood.',
+  },
 ];
 
 function Card({ item }) {
@@ -37,7 +47,7 @@ function Card({ item }) {
     <blockquote>“{item.quote}”</blockquote>
     <figcaption>
       <span className="feedback-avatar" aria-hidden="true">{item.code}</span>
-      <span><strong>Sample parent · {item.country}</strong><small>{item.className}</small></span>
+      <span><strong>Sample learner · {item.country}</strong><small>{item.className}</small></span>
     </figcaption>
   </figure>;
 }
@@ -89,11 +99,11 @@ export function ParentFeedback({ fullPage = false }) {
       <div className="section-heading">
         <div>
           <span className="eyebrow">LITTLE MOMENTS. MEANINGFUL DIFFERENCES.</span>
-          <h2 id="parent-feedback-title">A little reassurance,<br /><em>from a parent’s perspective.</em></h2>
-          <p className="sample-explainer">Fictional sample feedback for this design preview — not real parent testimonials.</p>
+          <h2 id="parent-feedback-title">A little reassurance,<br /><em>from women like you.</em></h2>
+          <p className="sample-explainer">Fictional sample feedback for this design preview — not real testimonials.</p>
         </div>
         <div className="carousel-controls">
-          {!fullPage && <Link className="text-link" to="/reviews">More parent stories <ArrowUpRight size={17} /></Link>}
+          {!fullPage && <Link className="text-link" to="/reviews">More learner stories <ArrowUpRight size={17} /></Link>}
           <div className="carousel-arrows">
             <button type="button" onClick={() => go(index - 1)} aria-label="Previous stories" disabled={pages < 2}><ArrowLeft size={17} /></button>
             <button type="button" onClick={() => go(index + 1)} aria-label="Next stories" disabled={pages < 2}><ArrowRight size={17} /></button>
@@ -105,7 +115,7 @@ export function ParentFeedback({ fullPage = false }) {
         className="carousel"
         role="group"
         aria-roledescription="carousel"
-        aria-label="Sample parent feedback"
+        aria-label="Sample learner and parent feedback"
         tabIndex={0}
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
@@ -153,14 +163,14 @@ export function FounderVoice() {
       <Reveal className="founder-intro">
         <span className="founder-symbol" aria-hidden="true"><Sprout size={34} strokeWidth={1.1} /></span>
         <span className="eyebrow">A NOTE FROM THE FOUNDER</span>
-        <h2 id="founder-title">Every child deserves<br /><em>time to understand.</em></h2>
+        <h2 id="founder-title">Everyone deserves<br /><em>time to understand.</em></h2>
         <span className="draft-label">DRAFT · FOR FOUNDER REVIEW</span>
       </Reveal>
       <Reveal className="founder-letter" delay={120}>
         <p className="founder-salaam">Assalamu alaikum,</p>
-        <p>“My hope for Zaaf is simple: that no child feels they have to struggle quietly with a lesson they haven’t understood.</p>
-        <p>We’re not here to replace your child’s madrassa, or to add another pressure to your week. We’re here to sit alongside them — to explain again, listen patiently, and give understanding the time it needs.</p>
-        <p>Whether your family is in Kerala or making a home in the Gulf, I want this to feel like a little support you can turn to. A familiar language. A steady rhythm. Someone on your child’s side.”</p>
+        <p>“My hope for Zaaf is simple: that no woman and no child feels they have to struggle quietly with something they haven’t understood.</p>
+        <p>Many of us left our own learning somewhere behind us, and meant to return to it. So Zaaf is built two ways: a course of your own, shaped with a mentor who asks what you actually want to learn, and quiet tuition alongside a child’s madrassa. Neither replaces anything. Both make room to ask again.</p>
+        <p>Whether you are in Kerala or making a home in the Gulf, I want this to feel like a little support you can turn to. A familiar language. A steady rhythm. Someone on your side.”</p>
         <div className="founder-signoff">
           <span className="founder-signature">With care,</span>
           <strong>The Founder, Zaaf Academy</strong>

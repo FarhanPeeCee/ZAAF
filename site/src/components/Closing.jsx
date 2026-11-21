@@ -12,14 +12,14 @@ export function Closing() {
       <div className="closing-decoration" aria-hidden="true"><Sprout size={94} strokeWidth={.7} /></div>
       <div>
         <span className="eyebrow">A LITTLE HELP CAN MAKE A BIG DIFFERENCE</span>
-        <h2>Let’s find what works<br />for your child.</h2>
-        <p>{done ? 'Your plan is saved on this device. Send it whenever you’re ready.' : 'Tell us their class. We’ll take it from there.'}</p>
+        <h2>Let’s find what works<br />for you.</h2>
+        <p>{done ? 'Your plan is saved on this device. Send it whenever you’re ready.' : 'Tell us what you’d like to learn. We’ll take it from there.'}</p>
       </div>
       <div className="closing-action">
         <ChatButton light context={done ? 'closing-plan' : 'closing'} message={done ? planMessage(plan) : undefined}>
           {done ? 'Send my plan' : 'Let’s talk on WhatsApp'}
         </ChatButton>
-        {!done && <Link className="closing-link" to="/plan#plan">or build your plan first <ArrowUpRight size={14} /></Link>}
+        {!done && <Link className="closing-link" to="/plan#plan">or build your course first <ArrowUpRight size={14} /></Link>}
         <span>No forms. No pressure. Just a conversation.</span>
       </div>
     </div>

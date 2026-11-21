@@ -33,33 +33,34 @@ export function Footer() {
       <div className="footer-main">
         <div>
           <Logo />
-          <p>Familiar lessons. Fresh confidence.<br />One-to-one madrassa tuition, from Kerala.</p>
+          <p>Your syllabus. Your pace.<br />One-to-one Islamic learning for women, from Kerala.</p>
           <ContactLines compact />
         </div>
         <div className="footer-column">
           <h4>Learning at Zaaf</h4>
+          <Link to="/learn">Personalised courses</Link>
           <Link to="/plan">Build your plan</Link>
-          <Link to="/classes">Our classes</Link>
+          <Link to="/classes">Madrassa tuition</Link>
           <Link to="/exams">Exam support</Link>
-          <Link to="/teachers">Our teachers</Link>
           <Link to="/fees">Fees</Link>
         </div>
         <div className="footer-column">
           <h4>A little about us</h4>
           <Link to="/about">The Zaaf story</Link>
           <Link to="/features">How it works</Link>
-          <Link to="/reviews">Parent stories</Link>
+          <Link to="/teachers">Our mentors</Link>
+          <Link to="/reviews">Learner stories</Link>
           <Link to="/contact">Contact us</Link>
         </div>
         <div className="footer-column">
           <h4>Grow with us</h4>
-          <Link to="/teach">Become a teacher <ArrowUpRight size={13} /></Link>
+          <Link to="/teach">Become a mentor <ArrowUpRight size={13} /></Link>
           <Link to="/syllabus/skimvb">SKIMVB syllabus</Link>
           <Link to="/syllabus/sksvb">SKSVB syllabus</Link>
           <span>Kerala, India · Teaching online</span>
         </div>
       </div>
-      <div className="footer-disclaimer">Zaaf provides supporting tuition, not madrassa enrolment. Board names identify the syllabi taught and do not imply affiliation or endorsement.</div>
+      <div className="footer-disclaimer">Zaaf provides personalised courses and supporting tuition — not madrassa enrolment or certification. Board names identify the syllabi taught and do not imply affiliation or endorsement.</div>
       <div className="footer-bottom">
         <span>© {new Date().getFullYear()} Zaaf Academy. With care, from Kerala.</span>
         <Link to="/privacy">Privacy, in plain words <ArrowUpRight size={13} /></Link>

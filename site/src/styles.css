@@ -28,7 +28,7 @@
 .hero .eyebrow{font-size:9px;letter-spacing:1.7px;display:flex;gap:10px;align-items:center;margin-bottom:23px}
 .small-rule{width:23px;height:1px;background:var(--rust)}
 .hero h1{font-size:clamp(55px,5.65vw,80px);line-height:1.07;letter-spacing:-2.7px;position:relative;margin-bottom:24px}
-.heading-star{color:#b58a51;position:absolute;left:367px;bottom:24px;font-size:45px;font-family:serif;font-weight:400}
+.heading-star{color:#b58a51;position:relative;display:inline-block;margin-left:12px;top:-20px;font-size:38px;line-height:0;font-family:serif;font-weight:400}
 .hero-copy>p{max-width:365px;font-size:13px;line-height:1.9;margin-bottom:26px}
 .hero-actions{display:flex;align-items:center;gap:22px}
 .hero-secondary{font-size:10px;display:flex;align-items:center;gap:8px;white-space:nowrap}
@@ -204,7 +204,6 @@
 @media(min-width:1450px){
 .hero{padding-block:75px}
 .hero-visual{max-width:none}
-.heading-star{left:405px}
 .hero-copy>p{font-size:14px;max-width:410px}
 .hero-secondary{font-size:11px}
 .hero-actions .button{font-size:12px}
@@ -220,7 +219,6 @@
 .navigation a{font-size:10px}
 .hero-inner{gap:35px}
 .hero h1{font-size:64px}
-.heading-star{left:320px;font-size:35px}
 .hero-actions{gap:16px;align-items:flex-start;flex-direction:column}
 .hero-reassurance{gap:14px}
 .hero-visual{padding-right:9px}
@@ -251,7 +249,6 @@
 .menu-button{display:block}
 .header-chat{margin-left:auto}
 .hero h1{font-size:55px}
-.heading-star{left:276px;font-size:30px;bottom:16px}
 .hero-copy>p{font-size:12px}
 .hero .eyebrow{font-size:8px;letter-spacing:1px}
 .hero-inner{gap:28px}
@@ -319,7 +316,6 @@
 .hero-copy{padding:0}
 .hero .eyebrow{font-size:8px;letter-spacing:1.4px;margin-bottom:21px}
 .hero h1{font-size:61px;line-height:1.06;letter-spacing:-2px;margin-bottom:22px}
-.heading-star{left:302px;bottom:19px;font-size:33px}
 .hero-copy>p{font-size:12px;line-height:1.9;max-width:350px;margin-bottom:22px}
 .hero-actions{gap:16px;flex-direction:row;align-items:center;flex-wrap:wrap}
 .hero-actions .button{font-size:9px;padding:13px 14px;min-height:45px;gap:7px}
@@ -448,7 +444,6 @@ body{padding-bottom:65px}
 
 @media(max-width:370px){
 .hero h1{font-size:54px}
-.heading-star{left:267px;font-size:27px}
 .hero-actions{gap:12px}
 .hero-actions .button{font-size:8px;padding-inline:12px}
 .class-caption{font-size:6px}

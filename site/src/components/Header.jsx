@@ -8,10 +8,10 @@ import { useFocusTrap, useScrolledPast, useScrollProgress } from '../lib/motion'
 import { ChatButton } from './ui';
 
 const LINKS = [
-  ['Classes', '/classes'],
+  ['Personalised courses', '/learn'],
+  ['Madrassa tuition', '/classes'],
   ['Exam support', '/exams'],
-  ['Our teachers', '/teachers'],
-  ['How it works', '/features'],
+  ['Our mentors', '/teachers'],
   ['Fees', '/fees'],
   ['About us', '/about'],
 ];
@@ -49,7 +49,7 @@ export function Header() {
 
   return <>
     <div className="announcement">
-      <span>Rooted in Kerala. Supporting little learners, wherever they are.</span>
+      <span>Rooted in Kerala. One-to-one learning for women and girls, wherever they are.</span>
       <KeralaClock />
     </div>
     <header className={`header ${condensed ? 'is-condensed' : ''}`}>
@@ -88,9 +88,10 @@ export function Header() {
       <nav aria-label="Menu">
         <NavLink to="/plan">Build your plan{done > 0 ? ` · ${done}/${total}` : ''}</NavLink>
         {LINKS.map(([label, path]) => <NavLink key={path} to={path}>{label}</NavLink>)}
-        <NavLink to="/reviews">Parent stories</NavLink>
+        <NavLink to="/features">How it works</NavLink>
+        <NavLink to="/reviews">Learner stories</NavLink>
         <NavLink to="/contact">Contact us</NavLink>
-        <NavLink to="/teach">Become a teacher</NavLink>
+        <NavLink to="/teach">Become a mentor</NavLink>
       </nav>
       <ChatButton>Let’s talk on WhatsApp</ChatButton>
     </div>

@@ -9,12 +9,12 @@ import { Footer } from './components/Footer';
 import { EnquiryDialog } from './components/EnquiryDialog';
 import { ChatButton, Toast } from './components/ui';
 import {
-  About, ClassDetail, Contact, Exams, Features, Fees, Home, NotFound,
+  About, ClassDetail, Contact, Exams, Features, Fees, Home, Learn, NotFound,
   PlanPage, Privacy, Reviews, Syllabus, Teachers,
 } from './pages';
 import { ClassesSection } from './components/Classes';
 
-const GENERAL = 'Hi Zaaf, I would like to know more about one-to-one madrassa tuition.';
+const GENERAL = 'Assalamu alaikum Zaaf, I would like to know more about learning with you.';
 
 function Route_Classes() {
   return <ClassesSection standalone />;
@@ -32,7 +32,7 @@ function ScrollAndTitle() {
 
   useEffect(() => {
     const title = pathname === '/'
-      ? 'Madrassa tuition, at your timings'
+      ? 'Your syllabus, your pace, your mentor'
       : pathname.split('/').filter(Boolean).map(s => s.replaceAll('-', ' ')).join(' · ');
     document.title = `${title.charAt(0).toUpperCase() + title.slice(1)} | Zaaf Academy`;
   }, [pathname]);
@@ -48,7 +48,7 @@ function MobileAction() {
     <ChatButton
       context={done ? 'mobile-bar-plan' : 'mobile-bar'}
       message={done ? planMessage(plan) : undefined}
-    >{done ? `Send my plan · ${done}/${total}` : 'Let’s talk about your child'}</ChatButton>
+    >{done ? `Send my plan · ${done}/${total}` : 'Let’s talk about learning'}</ChatButton>
   </div>;
 }
 
@@ -69,6 +69,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/plan" element={<PlanPage />} />
+          <Route path="/learn" element={<Learn />} />
           <Route path="/classes" element={<Route_Classes />} />
           <Route path="/classes/:slug" element={<ClassDetail />} />
           <Route path="/exams" element={<Exams />} />

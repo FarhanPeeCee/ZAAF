@@ -58,3 +58,65 @@ export const WEEKDAYS = [
   { id: 'sat', short: 'Sat', label: 'Saturday' },
   { id: 'sun', short: 'Sun', label: 'Sunday' },
 ];
+
+// ---------------------------------------------------------------------------
+// Two ways to learn at Zaaf. The personalised course is the main category:
+// any woman, at any age, building her own syllabus with a mentor. Madrassa
+// tuition is the second track, for a child keeping pace with her classes.
+// ---------------------------------------------------------------------------
+
+export const TRACKS = [
+  {
+    id: 'self',
+    label: 'For myself',
+    short: 'Personalised course',
+    title: 'Design my own course',
+    blurb: 'Choose what you want to learn — Qur’an, Hifz, Hadith, Fiqh, Arabic and more — and build the syllabus and the timetable together with your mentor.',
+    who: 'Any woman, at any age. No madrassa, no previous study and no entrance test needed.',
+    path: '/learn',
+  },
+  {
+    id: 'child',
+    label: 'For my child',
+    short: 'Madrassa tuition',
+    title: 'Support my child’s madrassa',
+    blurb: 'One-to-one help alongside the madrassa she already attends — the same SKIMVB or SKSVB syllabus, Classes 1 to 12, at timings you choose.',
+    who: 'Girls and women at every class, and boys up to Class 4.',
+    path: '/classes',
+  },
+];
+
+// What a personalised course can be built from. Subjects are chosen by the
+// learner and shaped into a syllabus by her mentor; nothing here is a fixed
+// package or a graded programme.
+export const SUBJECTS = [
+  { id: 'quran', label: 'Qur’an reading & Tajweed', note: 'From the letters themselves to careful, confident recitation.' },
+  { id: 'hifz', label: 'Hifz — memorisation', note: 'A memorisation plan at a pace you can actually keep, with regular revision.' },
+  { id: 'tafsir', label: 'Tafsir', note: 'Meaning and context, passage by passage, as slowly as you like.' },
+  { id: 'hadith', label: 'Hadith', note: 'Selected narrations read together, with explanation and discussion.' },
+  { id: 'fiqh', label: 'Fiqh', note: 'Prayer, purity, fasting, zakat and the rulings of an ordinary day.' },
+  { id: 'aqeedah', label: 'Aqeedah', note: 'The foundations of belief, explained in plain words.' },
+  { id: 'arabic', label: 'Arabic', note: 'Reading and understanding the language of the text itself.' },
+  { id: 'seerah', label: 'Seerah & Islamic history', note: 'The life of the Prophet ﷺ and the generations that followed.' },
+  { id: 'adkar', label: 'Duas & daily practice', note: 'What to say and do, from waking to sleeping.' },
+];
+
+export const STARTING_POINTS = [
+  { value: 'new', label: 'Starting from the beginning', note: 'Never studied this formally, or starting again after a long gap.' },
+  { value: 'some', label: 'I know a little', note: 'Can manage some of it, but slowly and with gaps.' },
+  { value: 'steady', label: 'Comfortable — I want depth', note: 'Studied before and looking to go further.' },
+];
+
+// Why she is learning. It changes the syllabus more than the subject does, so
+// the mentor is told before the first session rather than after it.
+export const INTENTIONS = [
+  { value: 'understand', label: 'To understand my prayers and reading' },
+  { value: 'memorise', label: 'To memorise, steadily' },
+  { value: 'teach', label: 'To teach my children at home' },
+  { value: 'depth', label: 'To study a subject properly, in depth' },
+  { value: 'habit', label: 'To build a steady habit of learning' },
+];
+
+export function subjectById(id) {
+  return SUBJECTS.find(s => s.id === id);
+}

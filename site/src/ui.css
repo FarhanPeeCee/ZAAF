@@ -307,3 +307,146 @@ body.no-scroll{overflow:hidden}
 .founder-letter p{font-size:12px}
 .toast-area{bottom:78px}
 }
+
+/* ===========================================================================
+   Two tracks: a personalised course (warm, rust accent) and madrassa tuition
+   (the sage green of the original site).
+   =========================================================================== */
+
+.path-chooser-wrap{padding-block:62px}
+.path-heading{text-align:center;margin-bottom:34px}
+.path-heading h2{font-size:38px}
+.path-chooser{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.path-card{display:flex;flex-direction:column;height:100%;padding:34px 34px 30px;border:1px solid #e2ddcc;border-radius:10px;background:#fffdf7;transition:transform .22s ease,box-shadow .22s ease,border-color .22s}
+.path-card:hover{transform:translateY(-4px);box-shadow:0 16px 36px #2a3f330f}
+.path-icon{display:grid;place-items:center;width:48px;height:48px;border-radius:12px;margin-bottom:20px}
+.path-label{font-size:9px;letter-spacing:1.6px;font-weight:650;margin-bottom:11px}
+.path-card h3{font-size:29px;margin-bottom:14px;line-height:1.2}
+.path-card p{font-size:12.5px;line-height:1.9;margin-bottom:16px}
+.path-who{display:block;font-size:10.5px;line-height:1.8;color:#7d8574;border-top:1px dashed #e2ddcc;padding-top:15px;margin-bottom:18px}
+.path-card .text-link{margin-top:auto;font-size:11px}
+.path-self{background:#f7f1e6;border-color:#e6d8bf}
+.path-self .path-icon{background:#eadfc6;color:#9a6a44}
+.path-self .path-label{color:#9a6a44}
+.path-self:hover{border-color:#cfae7e}
+.path-child .path-icon{background:#e7ece0;color:#4b624b}
+.path-child .path-label{color:#587055}
+.path-child:hover{border-color:#a9b79e}
+
+/* track choice inside the planner */
+.track-choice{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.track-card{display:flex;flex-direction:column;align-items:flex-start;gap:4px;text-align:left;padding:18px;border:1px solid #dfe0d2;border-radius:8px;background:#fafaf4;transition:border-color .18s,background .18s,transform .18s}
+.track-card:hover{transform:translateY(-2px)}
+.track-icon{display:grid;place-items:center;width:34px;height:34px;border-radius:9px;background:#eceee2;color:#4f6550;margin-bottom:8px}
+.track-card strong{font-family:'DM Serif Display',serif;font-size:21px;font-weight:400;color:var(--green)}
+.track-short{font-size:9px;letter-spacing:1.3px;font-weight:650;color:#8a9180}
+.track-card small{font-size:10px;line-height:1.7;color:#7d8574;margin-top:6px}
+.track-card.is-selected{border-color:var(--green);background:#eef1e6}
+.track-self .track-icon{background:#eadfc6;color:#9a6a44}
+.track-self.is-selected{border-color:#b98b56;background:#f7f1e6}
+.track-self.is-selected strong{color:#8d5c3b}
+
+/* --- subjects -------------------------------------------------------------- */
+.subjects-section{background:#f7f1e6}
+.subject-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.subject-card{position:relative;width:100%;height:100%;text-align:left;background:#fffdf7;border:1px solid #e6dcc6;border-radius:8px;padding:22px 22px 20px;transition:border-color .2s,transform .2s,box-shadow .2s}
+.subject-card:hover{transform:translateY(-3px);border-color:#cfae7e;box-shadow:0 10px 24px #6b4f2c12}
+.subject-card h3{font-size:19px;margin-bottom:9px;padding-right:26px;color:var(--green)}
+.subject-card p{font-size:11px;line-height:1.85;margin:0}
+.subject-mark{position:absolute;top:20px;right:20px;width:20px;height:20px;border:1px solid #ddd2b8;border-radius:50%;display:grid;place-items:center;color:#fff;background:transparent;transition:background .18s,border-color .18s}
+.subject-card.is-selected{border-color:#b98b56;background:#fdf8ee}
+.subject-card.is-selected .subject-mark{background:#9a6a44;border-color:#9a6a44}
+.subject-card.is-selected h3{color:#8d5c3b}
+.subject-basket{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:22px;padding:20px 24px;border:1px dashed #ddd2b8;border-radius:8px;background:#fdf9f0}
+.subject-basket.is-on{border-style:solid;border-color:#cfae7e}
+.subject-basket .eyebrow{margin-bottom:7px;font-size:8px;color:#9a6a44}
+.subject-basket strong{display:block;font-family:'DM Serif Display',serif;font-size:20px;font-weight:400;letter-spacing:-.3px;line-height:1.35}
+.subject-basket .step-note{margin:0}
+.subject-basket-actions{display:flex;align-items:center;gap:18px;flex-shrink:0}
+
+/* subject + intention pickers inside the planner */
+.subject-picker,.intention-picker{display:flex;flex-wrap:wrap;gap:6px}
+.subject-picker button,.intention-picker button{background:#fafaf4;border:1px solid #dfe0d2;border-radius:999px;padding:9px 15px;font-size:10.5px;color:#4e5c4c;transition:background .18s,color .18s,border-color .18s}
+.subject-picker button:hover,.intention-picker button:hover{border-color:#c0a378}
+.subject-picker button.is-selected,.intention-picker button.is-selected{background:#8d5c3b;color:#fff;border-color:#8d5c3b}
+.subject-notes{margin-top:14px}
+.subject-notes p{font-size:10.5px;line-height:1.85;margin:0 0 7px}
+.subject-notes strong{color:#4f5a4d;font-weight:550}
+.intention-picker{margin-top:4px}
+
+/* the personalised track tints the builder */
+.planner-progress{color:var(--green)}
+.planner-section.is-self{background:#f7f1e6}
+.planner-section.is-self .planner-progress{color:#9a6a44}
+.planner-section.is-self .planner-result{border-color:#e6dcc6}
+.planner-section.is-self .message-draft{background:#f3ead9}
+.plan-nudge.is-self{background:#f7f1e6;border-color:#e6d8bf}
+.plan-nudge.is-self .eyebrow{color:#9a6a44}
+
+/* --- how a course comes together ------------------------------------------ */
+.mentor-flow{background:#fbfaf6}
+.mentor-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:42px}
+.mentor-step{position:relative;background:#fffdf7;border:1px solid #e5e0d0;border-radius:9px;padding:26px 24px 24px}
+.mentor-step-icon{display:grid;place-items:center;width:42px;height:42px;border-radius:11px;background:#eadfc6;color:#9a6a44;margin-bottom:18px}
+.mentor-step-number{position:absolute;top:24px;right:22px;font-family:'DM Serif Display',serif;font-size:17px;color:#c3bba6}
+.mentor-step h3{font-size:20px;margin-bottom:10px;line-height:1.25}
+.mentor-step p{font-size:11px;line-height:1.9;margin:0}
+
+/* --- who it is for --------------------------------------------------------- */
+.whom-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.whom-card{background:#f7f1e6;border:1px solid #e6dcc6;border-radius:9px;padding:28px 26px}
+.whom-card .choice-icon{background:#eadfc6;color:#9a6a44}
+.whom-card h3{font-size:21px;margin-bottom:11px;line-height:1.25}
+.whom-card p{font-size:12px;line-height:1.9;margin:0}
+
+/* --- cross-sell between the tracks ---------------------------------------- */
+.cross-sell{display:flex;align-items:flex-start;gap:14px;border:1px dashed #d9cdb3;background:#faf5ea;border-radius:7px;padding:19px 21px;margin-top:28px}
+.cross-sell svg{color:#9a6a44;margin-top:2px}
+.cross-sell p{font-size:11.5px;line-height:1.85;margin:0}
+.cross-sell a{color:#8d5c3b;font-weight:550;border-bottom:1px solid #d9b88f}
+
+/* --- FAQ switch ------------------------------------------------------------ */
+.faq-switch{display:inline-flex;gap:3px;background:#f1f1e9;border:1px solid #dedfd5;border-radius:6px;padding:3px;margin-bottom:22px}
+.faq-switch button{background:none;border-radius:4px;padding:9px 14px;font-size:10px;color:#6d7566}
+.faq-switch button.is-selected{background:#fff;color:var(--green);box-shadow:0 1px 3px #233a2514}
+
+@media(max-width:1150px){
+.path-chooser{gap:14px}
+.path-card{padding:27px 26px 24px}
+.path-card h3{font-size:25px}
+.subject-grid{grid-template-columns:repeat(2,1fr)}
+.mentor-steps{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:900px){
+.whom-grid{grid-template-columns:1fr;gap:12px}
+.subject-basket{flex-direction:column;align-items:flex-start;gap:16px}
+}
+@media(max-width:640px){
+.path-chooser-wrap{padding-block:42px}
+.path-heading h2{font-size:31px}
+.path-chooser{grid-template-columns:1fr}
+.path-card{padding:24px 22px 22px}
+.path-card h3{font-size:26px}
+.track-choice{grid-template-columns:1fr}
+.subject-grid{grid-template-columns:1fr}
+.subject-card{padding:19px 18px}
+.subject-basket{padding:18px}
+.subject-basket strong{font-size:18px}
+.subject-basket-actions{flex-direction:column;align-items:stretch;gap:12px;width:100%}
+.mentor-steps{grid-template-columns:1fr;gap:12px;margin-top:30px}
+.mentor-step{padding:22px 20px}
+.faq-switch{width:100%}
+.faq-switch button{flex:1;padding:9px 6px;font-size:9.5px}
+}
+
+/* the personalised track keeps one accent colour across every control */
+.planner-section.is-self .segmented button.is-selected,
+.planner-section.is-self .day-picker button.is-selected,
+.planner-section.is-self .slot-picker button.is-selected,
+.planner-section.is-self .week-strip span.is-on{background:#8d5c3b;border-color:#8d5c3b;color:#fff}
+.planner-section.is-self .slot-picker button.is-selected small{color:#e8d6c2}
+.planner-section.is-self .week-times strong{color:#8d5c3b}
+.planner-section.is-self .week-preview{background:#fbf6ec;border-color:#e6dcc6}
+.planner-section.is-self .button-green{background:#8d5c3b}
+.planner-section.is-self .button-green:hover{background:#78492b}
+.planner-section.is-self .planner-step:hover{border-color:#d8c3a2}
